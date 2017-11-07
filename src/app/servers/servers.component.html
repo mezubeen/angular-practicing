@@ -17,6 +17,10 @@
 
  <!-- <p [innerText]="allowNewServer"></p> -->
 
-<p *ngIf="serverCreated">server was created, {{ serverCreationStatus}}</p>
+<p *ngIf="serverCreated; else noServer">server was created, {{ serverCreationStatus}}</p>
+
+<ng-template #noServer>
+<p>No server is created yet!</p>
+</ng-template>
 
 <app-server></app-server>
