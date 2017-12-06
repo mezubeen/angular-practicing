@@ -1,0 +1,20 @@
+<p>
+  assignment!
+</p>
+
+<button class="btn btn-primary" (click)="onButtonToggle()">Display details</button>
+
+<p *ngIf="showSecret">secret password = tuna</p>
+
+<!-- <div *ngFor="let logs of buttonLog"
+	  [ngStyle]="{backgroundColor: logs >= 5 ? 'blue' : 'transparent'}"
+	  [ngClass]="{'whiteText' : logs>= 5}"
+
+	  >{{ logs }}</div> -->
+
+<!-- instead of checking the loop status , checking it's index -->
+<div *ngFor="let logs of buttonLog; let i = index"
+	  [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+	  [ngClass]="{'whiteText' : i>= 5}"
+
+	  >{{ logs }}</div>
